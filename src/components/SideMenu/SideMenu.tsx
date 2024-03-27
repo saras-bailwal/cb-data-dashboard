@@ -1,5 +1,5 @@
 import { CSSObject } from "@mui/system";
-import * as React from "react";
+import React from "react";
 import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -57,11 +57,11 @@ const menuListTranslations = [
   "Sign Out",
 ];
 const menuListIcons = [
-  <HomeIcon />,
-  <EqualizerIcon />,
-  <Person2Icon />,
-  <Settings />,
-  <ExitToAppIcon />,
+  <HomeIcon key={1} />,
+  <EqualizerIcon key={2} />,
+  <Person2Icon key={3} />,
+  <Settings key={4} />,
+  <ExitToAppIcon key={5} />,
 ];
 
 const SideMenu = () => {

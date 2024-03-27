@@ -14,7 +14,9 @@ import {
 
 const Profile = () => {
   const { data: session } = useSession();
-  const names = session.user.name.split(" ");
+  console.log("session dekh", session)
+  let newSession = !session?.user?.name as any;
+  const names = newSession.toString().split(" ");
   const firstName = names[0];
   const lastName = names.length > 1 ? names[names.length - 1] : "";
   const [formData, setFormData] = useState({
@@ -26,7 +28,7 @@ const Profile = () => {
     receiveEmails: false,
   });
 
-  const handleFormChange = (event) => {
+  const handleFormChange = (event: any) => {
     const { name, value, checked } = event.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -34,7 +36,7 @@ const Profile = () => {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
     console.log(formData); // Submit form data to server here
   };
