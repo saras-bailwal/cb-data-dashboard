@@ -6,6 +6,8 @@ import lightTheme from "@/theme/lightTheme";
 import Header from "@/components/Header";
 import Layout from "@/components/Layout";
 import { AppProps } from 'next/app';
+import { store } from "@/store/features/store";
+import { Provider } from 'react-redux'
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -35,20 +37,21 @@ const App = ({
                     ...lightTheme,
                 }),
             [mode],
-        );
+        ); 
     return (
-        <ColorModeContext.Provider value={colorMode}>
+        <Provider store={store}>
+             <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={mode === "dark" ? darkThemeChosen : lightThemeChosen}>
                 <SessionProvider session={session}>
                     <CssBaseline />
                     <Header ColorModeContext={ColorModeContext}/>
                     <Layout>
-                        <Component {...pageProps}/>
+                        <Component {...pageProps} />
                     </Layout>
                 </SessionProvider>
             </ThemeProvider>
         </ColorModeContext.Provider>
-
+        </Provider>
     )
 }
 

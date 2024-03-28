@@ -31,6 +31,9 @@ const Footer = () => {
             <FooterLink href={"/dashboard/settings"}>Settings</FooterLink>
           </li>
           <li>
+            <FooterLink href={"/dashboard/habits"}>Habits</FooterLink>
+          </li>
+          <li>
             <FooterLink href={"/#termsandconditions"}>
               Terms & Conditions
             </FooterLink>

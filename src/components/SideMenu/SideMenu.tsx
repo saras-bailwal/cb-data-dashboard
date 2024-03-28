@@ -6,6 +6,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import Person2Icon from "@mui/icons-material/Person2";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
+import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import { Settings } from "@mui/icons-material";
 import NextLink from "next/link";
 import scss from "./SideMenu.module.scss";
@@ -48,12 +49,13 @@ const closedMixin = (theme: Theme): CSSObject => ({
   },
 });
 
-const menuRouteList = ["", "analytics", "profile", "settings", ""];
+const menuRouteList = ["", "analytics", "profile", "settings", "habits", ""];
 const menuListTranslations = [
   "Home",
   "Data",
   "Profile",
   "Settings",
+  "Habits",
   "Sign Out",
 ];
 const menuListIcons = [
@@ -61,7 +63,8 @@ const menuListIcons = [
   <EqualizerIcon key={2} />,
   <Person2Icon key={3} />,
   <Settings key={4} />,
-  <ExitToAppIcon key={5} />,
+  <HourglassEmptyIcon key={5} />,
+  <ExitToAppIcon key={6} />,
 ];
 
 const SideMenu = () => {
