@@ -12,10 +12,11 @@ export const authOptions: NextAuthOptions ={
                     access_type: 'offline',
                     response_type: 'code'
                 }
-            }
+            },
         }),
     ],
-    secret: process.env.NEXTAUTH_SECRET as string
+    secret: process.env.NEXTAUTH_SECRET as string,
+   
 }
 
 export default NextAuth(authOptions);
