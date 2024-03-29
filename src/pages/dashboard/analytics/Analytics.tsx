@@ -1,6 +1,6 @@
 import React from "react";
 import { DataGrid, GridSlots } from "@mui/x-data-grid";
-import LinearProgress from "@mui/material/LinearProgress";
+import LinearProgress, { linearProgressClasses, linearProgressClasses } from "@mui/material/LinearProgress";
 import { useDemoData } from "@mui/x-data-grid-generator";
 
 const Analytics = () => {
@@ -21,7 +21,7 @@ const Analytics = () => {
       <div style={{ height: "900px", width: "100%" }}>
         <DataGrid
           slots={{
-            loadingOverlay: LinearProgress as GridSlots['loadingOverlay'],
+            loadingOverlay: LinearProgress,
           }}
           loading={!data}
           {...data}
