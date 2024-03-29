@@ -11,6 +11,7 @@ import { Settings } from "@mui/icons-material";
 import NextLink from "next/link";
 import scss from "./SideMenu.module.scss";
 import HomeIcon from "@mui/icons-material/Home";
+import AvTimerIcon from '@mui/icons-material/AvTimer';
 
 import {
   Divider,
@@ -49,13 +50,14 @@ const closedMixin = (theme: Theme): CSSObject => ({
   },
 });
 
-const menuRouteList = ["", "analytics", "profile", "settings", "habits", ""];
+const menuRouteList = ["", "analytics", "profile", "settings", "habits","dailyHabits", ""];
 const menuListTranslations = [
   "Home",
   "Data",
   "Profile",
   "Settings",
   "Habits",
+  "Daily Habits",
   "Sign Out",
 ];
 const menuListIcons = [
@@ -64,7 +66,8 @@ const menuListIcons = [
   <Person2Icon key={3} />,
   <Settings key={4} />,
   <HourglassEmptyIcon key={5} />,
-  <ExitToAppIcon key={6} />,
+  <AvTimerIcon key={6} />,
+  <ExitToAppIcon key={7} />,
 ];
 
 const SideMenu = () => {

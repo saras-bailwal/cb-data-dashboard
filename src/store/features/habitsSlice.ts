@@ -1,4 +1,3 @@
-import habits from '@/pages/dashboard/habits';
 import { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 export interface Habits {

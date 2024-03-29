@@ -1,10 +1,12 @@
+import { DailyHabitsSlice } from './dailyHabitsSlice';
 import { HabitsSlice } from './habitsSlice';
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useSelector, useDispatch } from 'react-redux';
 
 export const store = configureStore({
     reducer: {
-        habits: HabitsSlice.reducer
+        habits: HabitsSlice.reducer,
+        dailyHabits: DailyHabitsSlice.reducer
     }
 })
 
